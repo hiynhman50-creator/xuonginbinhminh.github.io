@@ -539,13 +539,22 @@ body {
 
 }
 
-/* ==== Làm 3 nút dịch vụ bằng nhau - sửa chính xác 100% ==== */
+/* SỬA 3 NÚT DỊCH VỤ BẰNG NHAU - THÊM VÀO CUỐI FILE */
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa 3 card */
+}
 .card {
-    height: 100%;
+    flex: 1; /* Làm tất cả card rộng bằng nhau */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%; /* Cao bằng nhau */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Thêm bóng cho đẹp hơn */
 }
 .card .btn-primary {
-    margin-top: auto;
+    margin-top: auto; /* Đẩy nút xuống dưới cùng */
+    align-self: center; /* Căn giữa nút */
 }
