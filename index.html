@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xưởng In Bình Minh - In Bao Bì, Ly Nhựa, Ly Giấy, Thiết Kế Logo</title>
+    <meta name="description" content="Xưởng In Bình Minh chuyên in bao bì túi nilon, ly nhựa, ly giấy, hộp giấy và thiết kế logo thương hiệu chuyên nghiệp, giá cạnh tranh nhất TPHCM.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+           <div class="logo">
+    <img src="logo.png" alt="Logo In Bình Minh" class="logo-img">
+    <span class="logo-text">Xưởng In Bình Minh</span>
+</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" class="active">Trang chủ</a></li>
+                    <li><a href="#services">Dịch vụ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Xưởng In Bình Minh</h2>
+                <h3>Chuyên In Ấn Bao Bì & Thiết Kế Logo Chuyên Nghiệp</h3>
+                <p>In túi nilon, ly nhựa, ly giấy, hộp giấy theo yêu cầu – chất lượng cao, giao hàng nhanh, giá gốc xưởng!</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Nhận báo giá ngay</a>
+                    <a href="#services" class="btn-secondary">Xem dịch vụ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title">Dịch Vụ Chính</h2>
+        <div class="services-grid">
+            <!-- Túi nilon -->
+            <div class="service-card" onclick="openModal('tui-nilon')">
+                <div class="icon"><i class="fas fa-shopping-bag"></i></div>
+                <h3>In Bao Bì Túi Nilon</h3>
+                <p>Túi hột xoài, túi zipper, túi PE, PP, HDPE... in offset/flexo lên đến 8 màu...</p>
+                <a href="bang-gia-bao-bi.html" class="btn-primary" style="margin:10px;display:inline-block;padding:14px 30px;font-size:18px;">Xem giá</a>
+            </div>
+
+            <!-- Ly nhựa -->
+            <div class="service-card" onclick="openModal('ly-nhua')">
+                <div class="icon"><i class="fas fa-coffee"></i></div>
+                <h3>In Ly Nhựa - Ly Giấy</h3>
+                <p>Ly nhựa PP/PET 360ml-700ml, ly giấy 7oz-22oz, in tràn ly, in lụa...</p>
+                <a href="bang-gia-ly-nhua.html" class="btn-primary" style="margin:10px;display:inline-block;padding:14px 30px;font-size:18px;">Xem giá</a>
+            </div>
+
+            <!-- Thiết kế logo -->
+            <div class="service-card" onclick="openModal('thiet-ke')">
+                <div class="icon"><i class="fas fa-palette"></i></div>
+                <h3>Thiết Kế Logo & Nhận Diện Thương Hiệu</h3>
+                <p>Thiết kế logo chuyên nghiệp, bộ nhận diện thương hiệu đầy đủ...</p>
+                <a href="https://zalo.me/0969206206" target="_blank" style="margin:10px;display:inline-block;padding:14px 30px;font-size:18px;">Liên hệ</a>
+            </div>
+                    </div>
+                </div>
+</section>
+
+<!-- Modal chi tiết dịch vụ -->
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body">
+            <!-- Nội dung sẽ được JS chèn vào đây -->
+        </div>
+    </div>
+</div>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Về Xưởng In Bình Minh</h2>
+                    <p>Thành lập từ năm 2025, Bình Minh là một trong những xưởng in bao bì uy tín tại TP.HCM với nhà xưởng hơn 200m², hệ thống máy móc hiện đại.</p>
+                    <ul>
+                        <li>Cam kết chất lượng in sắc nét, màu chuẩn</li>
+                        <li>Giao hàng đúng hẹn toàn quốc</li>
+                        <li>Giá cạnh tranh – không qua trung gian</li>
+                        <li>Tư vấn thiết kế miễn phí 100%</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Liên hệ tư vấn ngay</a>
+                </div>
+                <div class="about-image">
+                    <img src="Xuongin.jpg" alt="Xưởng in Bình Minh">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên Hệ Nhanh</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Hotline</h4>
+                            <p>+84 969 206 206 (Ms.Vi)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Địa chỉ</h4>
+                            <p>2MGR+M8 Thủ Dầu Một, Bình Dương, Việt Nam.</p>
+                            <p>Toà Nhà MIBA (MIBA Tower)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>congdanvi@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+    <form action="https://formspree.io/f/manvgjdln" method="POST"> <!-- Giữ nguyên ID của bạn -->
+        <input type="text" name="Họ tên" placeholder="Họ tên" required>
+        <input type="tel" name="Số điện thoại" placeholder="Số điện thoại" required>
+        <input type="email" name="Email" placeholder="Email">
+        <textarea name="Nội dung yêu cầu" placeholder="Nội dung yêu cầu (số lượng, kích thước, mẫu thiết kế...)" rows="5"></textarea>
+        
+        <!-- Dòng quan trọng nhất – bắt buộc phải là _redirect với Formspree -->
+        <input type="hidden" name="_redirect" value="cam-on.html">
+        
+        <button type="submit" class="btn-primary">Gửi yêu cầu báo giá</button>
+    </form>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Xưởng In Bình Minh. Đã đăng ký bản quyền.</p>
+        </div>
+    </footer>
+
+   <!-- Nút Zalo xanh chuẩn chính chủ 2025 -->
+<div class="zalo-float">
+    <a href="https://zalo.me/0969206206" target="_blank" rel="nofollow">
+        <img src="Zalo.png" alt="Zalo">
+        <span>Liên hệ ngay</span>
+    </a>
+</div>
+
+<!-- ================== MODAL DỊCH VỤ - BẮT BUỘC PHẢI CÓ ================== -->
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body">
+            <!-- Nội dung sẽ được JS tự động nhét vào đây -->
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
