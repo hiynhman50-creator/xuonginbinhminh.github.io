@@ -538,3 +538,21 @@ body {
     background: #d32f2f;
 
 }
+
+/* ĐƯA 3 NÚT XUỐNG ĐÁY THẺ VUÔNG - HOẠT ĐỘNG 100% */
+.services > div {                    /* 3 thẻ div chứa từng dịch vụ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Đẩy nội dung lên trên, nút xuống dưới */
+    height: 100%;                    /* Quan trọng: phải có height 100% */
+    padding: 25px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.services a.btn-primary {            /* Chính xác class nút của bạn */
+    margin-top: auto !important;     /* Đây là dòng quan trọng nhất - đẩy nút xuống đáy */
+    align-self: center;
+}
