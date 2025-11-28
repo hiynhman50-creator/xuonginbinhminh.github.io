@@ -538,24 +538,3 @@ body {
     background: #d32f2f;
 
 }
-
-/* SỬA 3 NÚT DỊCH VỤ BẰNG NHAU - THÊM VÀO CUỐI FILE */
-.services {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Khoảng cách giữa 3 card */
-}
-.card {
-    flex: 1; /* Làm tất cả card rộng bằng nhau */
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Cao bằng nhau */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Thêm bóng cho đẹp hơn */
-}
-.card btn-primary {
-    margin-top: auto; /* Đẩy nút xuống dưới cùng */
-    align-self: center; /* Căn giữa nút */
-}
-
