@@ -536,4 +536,17 @@ body {
 }
 .table-container::-webkit-scrollbar-thumb:hover {
     background: #d32f2f;
+
+}
+
+/* ==== Làm 3 nút dịch vụ bằng nhau ==== */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.service-card .btn {
+    margin-top: auto;
 }
