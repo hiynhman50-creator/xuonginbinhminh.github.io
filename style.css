@@ -539,3 +539,13 @@ body {
 
 }
 
+/* ==== Làm 3 nút dịch vụ bằng nhau - sửa chính xác 100% ==== */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card .btn-primary {
+    margin-top: auto;
+}
