@@ -98,6 +98,45 @@ html {
     -webkit-text-size-adjust: 50%;
     zoom: reset; /* Chrome, Edge */
 }
+/* ================== LIGHTBOX PHÓNG TO ẢNH SIÊU ĐẸP 2025 ================== */
+#imgLightbox {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.97);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+#imgLightbox img {
+    max-width: 94%;
+    max-height: 94vh;
+    border-radius: 16px;
+    border: 6px solid #fff;
+    box-shadow: 0 0 50px rgba(255,87,34,0.8);
+    animation: zoomIn 0.4s ease;
+}
+#imgLightbox .close-lightbox {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 15px #000;
+    transition: 0.3s;
+}
+#imgLightbox .close-lightbox:hover {
+    color: #ff4444;
+    transform: scale(1.2);
+}
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes zoomIn { from {transform:scale(0.7);} to {transform:scale(1);} }
+/* ================================================================== */
+
 
     </style>
 </head>
@@ -141,32 +180,563 @@ html {
         <tbody>
             <!-- Bạn copy hết 62 dòng vào đây, mình để mẫu 2 dòng -->
             <tr>
-                <td>1</td>
-                <td>UKP93-12/14 OZ PET-T1</td>
-                <td>Ly nhựa PET 350ml MỎNG</td>
-                <td><img src="Hình ly\Ly nhựa PET 350ml MỎNG.jpg" class="product-img" alt="Ly PET 350ml"></td>
-                <td>350ml</td>
-                <td>1000</td>
-                <td><strong>509.000đ</strong></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>UKP93-12/14 OZ PET-T</td>
-                <td>Ly nhựa PET 350ml DÀY</td>
-                <td><img src="Hình ly\Ly nhựa PET 350ml DÀY.jpg" class="product-img" alt="Ly PET 350ml dày"></td>
-                <td>350ml</td>
-                <td>1000</td>
-                <td><strong>603.000đ</strong></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>UKP93-12/14 OZ PET-T</td>
-                <td>Ly nhựa PET 350ml DÀY</td>
-                <td><img src="Hình ly\Ly nhựa PET 350ml DÀY.jpg" class="product-img" alt="Ly PET 350ml dày"></td>
-                <td>350ml</td>
-                <td>1000</td>
-                <td><strong>603.000đ</strong></td>
-            </tr>
+    <td>1</td>
+    <td>UKP93-12/14 OZ PET-T1</td>
+    <td>Ly nhựa PET 93 - 12/14oz (350ml) MỎNG</td>
+    <td><img src="Hình ly\Ly nhựa PET 350ml MỎNG.jpg" class="product-img" alt="Ly PET 350ml mỏng"></td>
+    <td>350ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>509.000đ</strong></td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>UKP93-12/14 OZ PET-T</td>
+    <td>Ly nhựa PET 93 - 12/14oz (350ml) DÀY</td>
+    <td><img src="Hình ly\Ly nhựa PET 350ml DÀY.jpg" class="product-img" alt="Ly PET 350ml dày"></td>
+    <td>350ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>603.000đ</strong></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>UKP95-360PP-C-T</td>
+    <td>Ly nhựa PP trơn 95 - 360ml DÀY</td>
+    <td><img src="Hình ly\Ly PP 95 360ml trơn dày.jpg" class="product-img" alt="Ly PP 360ml dày"></td>
+    <td>360ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>490.000đ</strong></td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>UKP95-360PP-C-T1</td>
+    <td>Ly nhựa PP trơn 95 - 360ml DÀY TT</td>
+    <td><img src="Hình ly\Ly PP 95 360ml dày TT.jpg" class="product-img" alt="Ly PP 360ml dày TT"></td>
+    <td>360ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>440.000đ</strong></td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>UKP95-360PP-R-T</td>
+    <td>Ly nhựa PP 95 - 360ml đáy bầu</td>
+    <td><img src="Hình ly\Ly PP 95 360ml đáy bầu.jpg" class="product-img" alt="Ly PP 360ml đáy bầu"></td>
+    <td>360ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>510.000đ</strong></td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>MP P9312T</td>
+    <td>Ly PET 093 - 12/14oz (360ml) - Trung</td>
+    <td><img src="Hình ly\Ly PET 093 360ml Trung.jpg" class="product-img" alt="Ly PET 360ml trung"></td>
+    <td>360ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>510.000đ</strong></td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>MP P9312D</td>
+    <td>Ly PET 093 - 12/14oz (360ml) - Dày</td>
+    <td><img src="Hình ly\Ly PET 093 360ml Dày.jpg" class="product-img" alt="Ly PET 360ml dày"></td>
+    <td>360ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>580.000đ</strong></td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>UKP95-500PP-C-T</td>
+    <td>Ly nhựa PP 95 - 500ml DÀY</td>
+    <td><img src="Hình ly\Ly PP 95 500ml dày.jpg" class="product-img" alt="Ly PP 500ml dày"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>580.000đ</strong></td>
+</tr>
+<tr>
+    <td>9</td>
+    <td>UKP95-500PP-C-T2</td>
+    <td>Ly nhựa PP 95 - 500ml DÀY TT</td>
+    <td><img src="Hình ly\Ly PP 95 500ml dày TT.jpg" class="product-img" alt="Ly PP 500ml dày TT"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>520.000đ</strong></td>
+</tr>
+<tr>
+    <td>10</td>
+    <td>UKP95-500PP-C-M-T1</td>
+    <td>Ly nhựa PP 95 - 500ml MỎNG</td>
+    <td><img src="Hình ly\Ly PP 95 500ml mỏng.jpg" class="product-img" alt="Ly PP 500ml mỏng"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>480.000đ</strong></td>
+</tr>
+<tr>
+    <td>11</td>
+    <td>UKP95-500PP-R-T</td>
+    <td>Ly nhựa PP 95 - 500ml đáy bầu DÀY</td>
+    <td><img src="Hình ly\Ly PP 95 500ml đáy bầu dày.jpg" class="product-img" alt="Ly PP 500ml đáy bầu dày"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>606.000đ</strong></td>
+</tr>
+<tr>
+    <td>12</td>
+    <td>UKP95-500PP-R-T2</td>
+    <td>Ly nhựa PP 95 - 500ml đáy bầu DÀY TT</td>
+    <td><img src="Hình ly\Ly PP 95 500ml đáy bầu dày TT.jpg" class="product-img" alt="Ly PP 500ml đáy bầu TT"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>535.000đ</strong></td>
+</tr>
+<tr>
+    <td>13</td>
+    <td>MP P9316M</td>
+    <td>Ly PET 093 - 16oz (500ml) Mỏng (Keo Trong)</td>
+    <td><img src="Hình ly\Ly PET 093 500ml mỏng.jpg" class="product-img" alt="Ly PET 500ml mỏng"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>570.000đ</strong></td>
+</tr>
+<tr>
+    <td>14</td>
+    <td>MP P9316T</td>
+    <td>Ly PET 093 - 16oz (500ml) Trung (Keo Đỏ)</td>
+    <td><img src="Hình ly\Ly PET 093 500ml trung.jpg" class="product-img" alt="Ly PET 500ml trung"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>590.000đ</strong></td>
+</tr>
+<tr>
+    <td>15</td>
+    <td>MP P9316D</td>
+    <td>Ly PET 093 - 16oz (500ml) Dày (Keo Vàng)</td>
+    <td><img src="Hình ly\Ly PET 093 500ml dày.jpg" class="product-img" alt="Ly PET 500ml dày"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>645.000đ</strong></td>
+</tr>
+<tr>
+    <td>16</td>
+    <td>MP Q570</td>
+    <td>Ly PP Ø95 - 16oz (500ml) Bầu (Keo Trong)</td>
+    <td><img src="Hình ly\Ly PP 95 500ml bầu keo trong.jpg" class="product-img" alt="Ly PP bầu 500ml keo trong"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>515.000đ</strong></td>
+</tr>
+<tr>
+    <td>17</td>
+    <td>MP Q585</td>
+    <td>Ly PP Ø95 - 16oz (500ml) Bầu (Keo Vàng)</td>
+    <td><img src="Hình ly\Ly PP 95 500ml bầu keo vàng.jpg" class="product-img" alt="Ly PP bầu 500ml keo vàng"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>560.000đ</strong></td>
+</tr>
+<tr>
+    <td>18</td>
+    <td>MP B560M</td>
+    <td>Ly PP Ø95 - 16oz (500ml) Báng Mỏng (Keo Trong)</td>
+    <td><img src="Hình ly\Ly PP 95 500ml báng mỏng.jpg" class="product-img" alt="Ly PP báng mỏng 500ml"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>460.000đ</strong></td>
+</tr>
+<tr>
+    <td>19</td>
+    <td>MP B570T</td>
+    <td>Ly PP Ø95 - 16oz (500ml) Báng Trung (Keo Đỏ)</td>
+    <td><img src="Hình ly\Ly PP 95 500ml báng trung.jpg" class="product-img" alt="Ly PP báng trung 500ml"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>505.000đ</strong></td>
+</tr>
+<tr>
+    <td>20</td>
+    <td>MP B580D</td>
+    <td>Ly PP Ø95 - 16oz (500ml) Báng Dày (Keo Vàng)</td>
+    <td><img src="Hình ly\Ly PP 95 500ml báng dày.jpg" class="product-img" alt="Ly PP báng dày 500ml"></td>
+    <td>500ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>550.000đ</strong></td>
+</tr>
+<tr>
+    <td>21</td>
+    <td>UKP95-650PP-C-T</td>
+    <td>Ly nhựa trơn PP 95 - 650ml</td>
+    <td><img src="Hình ly\Ly PP 95 650ml trơn.jpg" class="product-img" alt="Ly PP 650ml trơn"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>640.000đ</strong></td>
+</tr>
+<tr>
+    <td>22</td>
+    <td>UKP95-650PP-C-T1</td>
+    <td>Ly nhựa trơn PP 95 - 650ml DÀY TT</td>
+    <td><img src="Hình ly\Ly PP 95 650ml trơn TT.jpg" class="product-img" alt="Ly PP 650ml trơn TT"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>608.000đ</strong></td>
+</tr>
+<tr>
+    <td>23</td>
+    <td>UKP95-650PP-C-M-T1</td>
+    <td>Ly nhựa trơn PP 95 - 650ml mỏng (THƯƠNG)</td>
+    <td><img src="Hình ly\Ly PP 95 650ml mỏng.jpg" class="product-img" alt="Ly PP 650ml mỏng"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>520.000đ</strong></td>
+</tr>
+<tr>
+    <td>24</td>
+    <td>UKP98-22OZ PET-T</td>
+    <td>Ly nhựa PET 98 - 22oz (650ml)</td>
+    <td><img src="Hình ly\Ly PET 98 650ml.jpg" class="product-img" alt="Ly PET 650ml"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>935.000đ</strong></td>
+</tr>
+<tr>
+    <td>25</td>
+    <td>UKP98-22OZ PET-T1</td>
+    <td>Ly nhựa PET 98 - 22oz (650ml) DÀY TT</td>
+    <td><img src="Hình ly\Ly PET 98 650ml dày TT.jpg" class="product-img" alt="Ly PET 650ml dày TT"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>890.000đ</strong></td>
+</tr>
+<tr>
+    <td>26</td>
+    <td>MP P9822</td>
+    <td>Ly PET Ø98 - 22oz (650ml)</td>
+    <td><img src="Hình ly\Ly PET 98 650ml.jpg" class="product-img" alt="Ly PET 650ml"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>760.000đ</strong></td>
+</tr>
+<tr>
+    <td>27</td>
+    <td>MP B680M</td>
+    <td>Ly PP Ø95 - 22oz (650ml) Báng Mỏng (Keo Trong)</td>
+    <td><img src="Hình ly\Ly PP 95 650ml báng mỏng.jpg" class="product-img" alt="Ly PP báng mỏng 650ml"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>555.000đ</strong></td>
+</tr>
+<tr>
+    <td>28</td>
+    <td>MP B690T</td>
+    <td>Ly PP Ø95 - 22oz (650ml) Báng Trung (Keo Đỏ)</td>
+    <td><img src="Hình ly\Ly PP 95 650ml báng trung.jpg" class="product-img" alt="Ly PP báng trung 650ml"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>600.000đ</strong></td>
+</tr>
+<tr>
+    <td>29</td>
+    <td>MP B610D</td>
+    <td>Ly PP Ø95 - 22oz (650ml) Báng Dày (Keo Vàng)</td>
+    <td><img src="Hình ly\Ly PP 95 650ml báng dày.jpg" class="product-img" alt="Ly PP báng dày 650ml"></td>
+    <td>650ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>640.000đ</strong></td>
+</tr>
+<tr>
+    <td>30</td>
+    <td>UKP95-700PP-C-T</td>
+    <td>Ly nhựa PP 95 - 700ml trơn DÀY</td>
+    <td><img src="Hình ly\Ly PP 95 700ml trơn dày.jpg" class="product-img" alt="Ly PP 700ml dày"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>700.000đ</strong></td>
+</tr>
+<tr>
+    <td>31</td>
+    <td>UKP95-700PP-C-T1</td>
+    <td>Ly nhựa PP 95 - 700ml trơn DÀY - TT</td>
+    <td><img src="Hình ly\Ly PP 95 700ml trơn dày TT.jpg" class="product-img" alt="Ly PP 700ml dày TT"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>620.000đ</strong></td>
+</tr>
+<tr>
+    <td>32</td>
+    <td>UKP95-700PP-C-M-T1</td>
+    <td>Ly nhựa PP 95 - 700ml trơn mỏng</td>
+    <td><img src="Hình ly\Ly PP 95 700ml trơn mỏng.jpg" class="product-img" alt="Ly PP 700ml mỏng"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>580.000đ</strong></td>
+</tr>
+<tr>
+    <td>33</td>
+    <td>UKP95-700PP-R-T</td>
+    <td>Ly nhựa PP 95 - 700ml đáy bầu DÀY</td>
+    <td><img src="Hình ly\Ly PP 95 700ml đáy bầu dày.jpg" class="product-img" alt="Ly PP 700ml đáy bầu"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>710.000đ</strong></td>
+</tr>
+<tr>
+    <td>34</td>
+    <td>UKP95-700PP-R-T1</td>
+    <td>Ly nhựa PP 95 - 700ml đáy bầu DÀY TT</td>
+    <td><img src="Hình ly\Ly PP 95 700ml đáy bầu dày TT.jpg" class="product-img" alt="Ly PP 700ml đáy bầu TT"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>630.000đ</strong></td>
+</tr>
+<tr>
+    <td>35</td>
+    <td>MP Q790</td>
+    <td>Ly PP Ø95 - 24oz (700ml) Bầu (Keo Trong)</td>
+    <td><img src="Hình ly\Ly PP 95 700ml bầu keo trong.jpg" class="product-img" alt="Ly PP bầu 700ml keo trong"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>605.000đ</strong></td>
+</tr>
+<tr>
+    <td>36</td>
+    <td>MP Q710</td>
+    <td>Ly PP Ø95 - 24oz (700ml) Bầu (Keo Vàng)</td>
+    <td><img src="Hình ly\Ly PP 95 700ml bầu keo vàng.jpg" class="product-img" alt="Ly PP bầu 700ml keo vàng"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>645.000đ</strong></td>
+</tr>
+<tr>
+    <td>37</td>
+    <td>MP B780M</td>
+    <td>Ly PP Ø95 - 24oz (700ml) Báng Mỏng (Keo Trong)</td>
+    <td><img src="Hình ly\Ly PP 95 700ml báng mỏng.jpg" class="product-img" alt="Ly PP báng mỏng 700ml"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>555.000đ</strong></td>
+</tr>
+<tr>
+    <td>38</td>
+    <td>MP B790T</td>
+    <td>Ly PP Ø95 - 24oz (700ml) Báng Trung (Keo Đỏ)</td>
+    <td><img src="Hình ly\Ly PP 95 700ml báng trung.jpg" class="product-img" alt="Ly PP báng trung 700ml"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>600.000đ</strong></td>
+</tr>
+<tr>
+    <td>39</td>
+    <td>MP B710D</td>
+    <td>Ly PP Ø95 - 24oz (700ml) Báng Dày (Keo Vàng)</td>
+    <td><img src="Hình ly\Ly PP 95 700ml báng dày.jpg" class="product-img" alt="Ly PP báng dày 700ml"></td>
+    <td>700ml</td>
+    <td>1000 ly/thùng</td>
+    <td><strong>640.000đ</strong></td>
+</tr>
+<tr>
+    <td>40</td>
+    <td>N90C</td>
+    <td>Nắp PET Ø93 - Cầu - Loại A</td>
+    <td><img src="Hình ly\Nắp PET 93 cầu.jpg" class="product-img" alt="Nắp cầu PET 93 loại A"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>420.000đ</strong></td>
+</tr>
+<tr>
+    <td>41</td>
+    <td>N93C(A)</td>
+    <td>Nắp PET Ø93 - Cầu Loại A</td>
+    <td><img src="Hình ly\Nắp PET 93 cầu loại A.jpg" class="product-img" alt="Nắp cầu PET 93"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>430.000đ</strong></td>
+</tr>
+<tr>
+    <td>42</td>
+    <td>N93KC</td>
+    <td>Nắp PET Ø93 - Kim Cương</td>
+    <td><img src="Hình ly\Nắp PET 93 kim cương.jpg" class="product-img" alt="Nắp kim cương PET 93"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>430.000đ</strong></td>
+</tr>
+<tr>
+    <td>43</td>
+    <td>N93BC</td>
+    <td>Nắp PET Ø93 - Bằng Cao</td>
+    <td><img src="Hình ly\Nắp PET 93 bằng cao.jpg" class="product-img" alt="Nắp bằng cao PET 93"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>430.000đ</strong></td>
+</tr>
+<tr>
+    <td>44</td>
+    <td>N93CB</td>
+    <td>Nắp PET Ø93 - Cầu Bằng</td>
+    <td><img src="Hình ly\Nắp PET 93 cầu bằng.jpg" class="product-img" alt="Nắp cầu bằng PET 93"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>430.000đ</strong></td>
+</tr>
+<tr>
+    <td>45</td>
+    <td>N95C(A)</td>
+    <td>Nắp PET Ø95 - Cầu Loại A</td>
+    <td><img src="Hình ly\Nắp PET 95 cầu loại A.jpg" class="product-img" alt="Nắp cầu PET 95"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>440.000đ</strong></td>
+</tr>
+<tr>
+    <td>46</td>
+    <td>N95KC</td>
+    <td>Nắp PET Ø95 - Kim Cương</td>
+    <td><img src="Hình ly\Nắp PET 95 kim cương.jpg" class="product-img" alt="Nắp kim cương PET 95"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>440.000đ</strong></td>
+</tr>
+<tr>
+    <td>47</td>
+    <td>N95CB</td>
+    <td>Nắp PET Ø95 - Cầu Bằng</td>
+    <td><img src="Hình ly\Nắp PET 95 cầu bằng.jpg" class="product-img" alt="Nắp cầu bằng PET 95"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>440.000đ</strong></td>
+</tr>
+<tr>
+    <td>48</td>
+    <td>N95BC</td>
+    <td>Nắp PET Ø95 - Bằng Cao</td>
+    <td><img src="Hình ly\Nắp PET 95 bằng cao.jpg" class="product-img" alt="Nắp bằng cao PET 95"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>440.000đ</strong></td>
+</tr>
+<tr>
+    <td>49</td>
+    <td>N98B</td>
+    <td>Nắp PET Ø98 - Bằng</td>
+    <td><img src="Hình ly\Nắp PET 98 bằng.jpg" class="product-img" alt="Nắp bằng PET 98"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>480.000đ</strong></td>
+</tr>
+<tr>
+    <td>50</td>
+    <td>N93TT</td>
+    <td>Nắp PET Ø93 - Nắp Uống Trực Tiếp</td>
+    <td><img src="Hình ly\Nắp PET 93 uống trực tiếp.jpg" class="product-img" alt="Nắp uống trực tiếp PET 93"></td>
+    <td>-</td>
+    <td>1.000 cái/thùng</td>
+    <td><strong>250.000đ</strong></td>
+</tr>
+<tr>
+    <td>51</td>
+    <td>N95TT</td>
+    <td>Nắp PET Ø95 - Nắp Uống Trực Tiếp</td>
+    <td><img src="Hình ly\Nắp PET 95 uống trực tiếp.jpg" class="product-img" alt="Nắp uống trực tiếp PET 95"></td>
+    <td>-</td>
+    <td>1.000 cái/thùng</td>
+    <td><strong>250.000đ</strong></td>
+</tr>
+<tr>
+    <td>52</td>
+    <td>UKP93-PETLID DOME-T1</td>
+    <td>Nắp nhựa cầu PET 93 - cật chấp tháp</td>
+    <td><img src="Hình ly\Nắp cầu PET 93 cật chắp tháp.jpg" class="product-img" alt="Nắp cầu chắp tháp PET 93"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>480.000đ</strong></td>
+</tr>
+<tr>
+    <td>53</td>
+    <td>Nắp nhựa cầu 90-93-95</td>
+    <td>Nắp nhựa cầu 90-93-95 (chung)</td>
+    <td><img src="Hình ly\Nắp nhựa cầu 90-93-95.jpg" class="product-img" alt="Nắp nhựa cầu chung"></td>
+    <td>-</td>
+    <td>2.000 cái/thùng</td>
+    <td><strong>420.000đ</strong></td>
+</tr>
+<tr>
+    <td>54</td>
+    <td>ỐNG HÚT MÀU ZIN 6812</td>
+    <td>Ống hút màu zin Ø6 x 21cm (bịch 500g)</td>
+    <td><img src="Hình ly\Ống hút màu zin 6812.jpg" class="product-img" alt="Ống hút màu zin"></td>
+    <td>-</td>
+    <td>5 kg</td>
+    <td><strong>200.000đ</strong></td>
+</tr>
+<tr>
+    <td>55</td>
+    <td>ỐNG HÚT MÀU ZIN 6PP 6812</td>
+    <td>Ống hút màu zin có bọc màng Ø6 x 21cm</td>
+    <td><img src="Hình ly\Ống hút zin bọc màng.jpg" class="product-img" alt="Ống hút zin bọc"></td>
+    <td>-</td>
+    <td>5 kg</td>
+    <td><strong>235.000đ</strong></td>
+</tr>
+<tr>
+    <td>56</td>
+    <td>ỐNG HÚT ĐEN CHỈ</td>
+    <td>Ống hút đen chì Ø8 x 21cm</td>
+    <td><img src="Hình ly\Ống hút đen chì.jpg" class="product-img" alt="Ống hút đen chì"></td>
+    <td>-</td>
+    <td>5 kg</td>
+    <td><strong>165.000đ</strong></td>
+</tr>
+<tr>
+    <td>57</td>
+    <td>ỐNG HÚT CONG 70 TTK</td>
+    <td>Ống hút cong 70 có bọc TTK</td>
+    <td><img src="Hình ly\Ống hút cong 70 TTK.jpg" class="product-img" alt="Ống hút cong TTK"></td>
+    <td>-</td>
+    <td>100 bọc</td>
+    <td><strong>185.000đ</strong></td>
+</tr>
+<tr>
+    <td>58</td>
+    <td>ỐNG CONG 80 TTK</td>
+    <td>Ống hút to (cống) Ø12 x 21cm có bọc</td>
+    <td><img src="Hình ly\Ống cống 80 TTK.jpg" class="product-img" alt="Ống cống TTK"></td>
+    <td>-</td>
+    <td>100 bọc</td>
+    <td><strong>270.000đ</strong></td>
+</tr>
+<tr>
+    <td>59</td>
+    <td>ỐNG HÚT MIA</td>
+    <td>Ống hút mía (đường kính 8-12mm)</td>
+    <td><img src="Hình ly\Ống hút mía.jpg" class="product-img" alt="Ống hút mía"></td>
+    <td>-</td>
+    <td>5 kg</td>
+    <td><strong>165.000đ</strong></td>
+</tr>
+<tr>
+    <td>60</td>
+    <td>TÚI 1 NGĂN 2 NGĂN TÚI 1 LÍT CÂN SẴN</td>
+    <td>Túi nilon 1-2 ngăn đựng ly (có sẵn)</td>
+    <td><img src="Hình ly\Túi nilon đựng ly.jpg" class="product-img" alt="Túi đựng ly"></td>
+    <td>-</td>
+    <td>30 kg</td>
+    <td><strong>1.110.000đ</strong></td>
+</tr>
+<tr>
+    <td>61</td>
+    <td>TÚI CHỚ</td>
+    <td>Túi chữ T đựng trà sữa, cà phê</td>
+    <td><img src="Hình ly\Túi chữ T.jpg" class="product-img" alt="Túi chữ T"></td>
+    <td>-</td>
+    <td>30 kg</td>
+    <td><strong>1.110.000đ</strong></td>
+</tr>
+<tr>
+    <td>62</td>
+    <td>MUỖNG DÀI ĐẠI QUANG</td>
+    <td>Muỗng dài Đại Quang (dài 19-21cm)</td>
+    <td><img src="Hình ly\Muỗng dài Đại Quang.jpg" class="product-img" alt="Muỗng dài"></td>
+    <td>-</td>
+    <td>2500 cái/thùng</td>
+    <td><strong>418.000đ</strong></td>
+</tr>
             <!-- Thêm 60 dòng còn lại... -->
         </tbody>
     </table>
@@ -183,6 +753,47 @@ html {
         <p>© 2025 Xưởng In Bình Minh. Đã đăng ký bản quyền.</p>
     </div>
 </footer>
+
+<!-- LIGHTBOX PHÓNG TO ẢNH LY -->
+<div id="imgLightbox">
+    <span class="close-lightbox">×</span>
+    <img src="" alt="Phóng to">
+</div>
+
+<script>
+// Lightbox siêu mượt cho tất cả ảnh ly
+document.querySelectorAll('.product-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.onclick = function(e) {
+        e.preventDefault();
+        const lightbox = document.getElementById('imgLightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        
+        lightboxImg.src = this.src;        // ảnh gốc (không bị resize)
+        lightboxImg.alt = this.alt;
+        lightbox.style.display = 'flex';
+        
+        // Tăng trải nghiệm: click ngoài hoặc ESC để đóng
+        setTimeout(() => lightbox.focus(), 100);
+    };
+});
+
+// Đóng lightbox
+document.querySelector('.close-lightbox').onclick = () => {
+    document.getElementById('imgLightbox').style.display = 'none';
+};
+document.getElementById('imgLightbox').onclick = (e) => {
+    if (e.target === document.getElementById('imgLightbox')) {
+        document.getElementById('imgLightbox').style.display = 'none';
+    }
+};
+// Đóng bằng phím ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('imgLightbox').style.display = 'none';
+    }
+});
+</script>
 
 </body>
 </html>
