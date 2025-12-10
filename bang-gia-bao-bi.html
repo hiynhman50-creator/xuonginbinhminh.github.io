@@ -137,11 +137,58 @@ html {
 @keyframes zoomIn { from {transform:scale(0.7);} to {transform:scale(1);} }
 /* ================================================================== */
 
+    /* NÚT TRỞ VỀ TRANG CHỦ - GÓC TRÊN BÊN PHẢI */
+    .btn-home-fixed {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 99999;
+        background: linear-gradient(135deg, #ff5722, #d32f2f);
+        color: white;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        animation: pulse 2s infinite;
+    }
+
+    .btn-home-fixed:hover {
+        transform: scale(1.1) translateY(-3px);
+        box-shadow: 0 8px 25px rgba(211, 47, 47, 0.6);
+        background: linear-gradient(135deg, #d32f2f, #c62828);
+    }
+
+    /* Hiệu ứng nhấp nháy nhẹ để thu hút */
+    @keyframes pulse {
+        0% { box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); }
+        50% { box-shadow: 0 4px 25px rgba(255, 87, 34, 0.7); }
+        100% { box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); }
+    }
+
+    /* Ẩn trên màn hình lớn nếu không thích, hoặc giữ luôn */
+    @media (max-width: 768px) {
+        .btn-home-fixed {
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+            top: 10px;
+            right: 10px;
+        }
+    }
+
 
     </style>
 </head>
 <body>
-
+<a href="index.html" class="btn-home-fixed" title="Về trang chủ">
+    <i class="fas fa-home"></i>
+</a>
 <header class="header">
     <div class="container">
         <div class="logo">
@@ -247,4 +294,5 @@ document.addEventListener('keydown', (e) => {
 </script>
 
 </body>
+
 </html>
