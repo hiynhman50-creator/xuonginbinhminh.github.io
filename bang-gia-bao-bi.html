@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Giá Bao Bì In Logo - Xưởng In Bình Minh 2025</title>
+    <title>Bảng Giá Bao Bi In Logo - Xưởng In Bình Minh 2025</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -98,6 +98,45 @@ html {
     -webkit-text-size-adjust: 50%;
     zoom: reset; /* Chrome, Edge */
 }
+/* ================== LIGHTBOX PHÓNG TO ẢNH SIÊU ĐẸP 2025 ================== */
+#imgLightbox {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.97);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+#imgLightbox img {
+    max-width: 94%;
+    max-height: 94vh;
+    border-radius: 16px;
+    border: 6px solid #fff;
+    box-shadow: 0 0 50px rgba(255,87,34,0.8);
+    animation: zoomIn 0.4s ease;
+}
+#imgLightbox .close-lightbox {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 15px #000;
+    transition: 0.3s;
+}
+#imgLightbox .close-lightbox:hover {
+    color: #ff4444;
+    transform: scale(1.2);
+}
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes zoomIn { from {transform:scale(0.7);} to {transform:scale(1);} }
+/* ================================================================== */
+
 
     </style>
 </head>
@@ -141,24 +180,15 @@ html {
         <tbody>
             <!-- Bạn copy hết 62 dòng vào đây, mình để mẫu 2 dòng -->
             <tr>
-                <td>1</td>
-                <td>UKP93-12/14 OZ PET-T1</td>
-                <td>Ly nhựa PET 350ml MỎNG</td>
-                <td><img src="Hình ly\Ly nhựa PET 350ml MỎNG.jpg" class="product-img" alt="Ly PET 350ml"></td>
-                <td>350ml</td>
-                <td>1000</td>
-                <td><strong>509.000đ</strong></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>UKP93-12/14 OZ PET-T</td>
-                <td>Ly nhựa PET 350ml DÀY</td>
-                <td><img src="https://inlygiaygiare.com.vn/wp-content/uploads/ly-pet-350ml-day.jpg" class="product-img" alt="Ly PET 350ml dày"></td>
-                <td>350ml</td>
-                <td>1000</td>
-                <td><strong>603.000đ</strong></td>
-            </tr>
-            <!-- Thêm 60 dòng còn lại... -->
+    <td>1</td>
+    <td>Đang cập nhật...</td>
+    <td>Đang cập nhật...</td>
+    <td><img src="Hình Bao\1." class="product-img" alt="đang cập nhật..."></td>
+    <td>Đang cập nhật...</td>
+    <td>Đang cập nhật...</td>
+    <td><strong>Đang cập nhật...</strong></td>
+</tr>
+
         </tbody>
     </table>
 </div>
@@ -175,6 +205,46 @@ html {
     </div>
 </footer>
 
-</body>
+<!-- LIGHTBOX PHÓNG TO ẢNH LY -->
+<div id="imgLightbox">
+    <span class="close-lightbox">×</span>
+    <img src="" alt="Phóng to">
+</div>
 
+<script>
+// Lightbox siêu mượt cho tất cả ảnh ly
+document.querySelectorAll('.product-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.onclick = function(e) {
+        e.preventDefault();
+        const lightbox = document.getElementById('imgLightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        
+        lightboxImg.src = this.src;        // ảnh gốc (không bị resize)
+        lightboxImg.alt = this.alt;
+        lightbox.style.display = 'flex';
+        
+        // Tăng trải nghiệm: click ngoài hoặc ESC để đóng
+        setTimeout(() => lightbox.focus(), 100);
+    };
+});
+
+// Đóng lightbox
+document.querySelector('.close-lightbox').onclick = () => {
+    document.getElementById('imgLightbox').style.display = 'none';
+};
+document.getElementById('imgLightbox').onclick = (e) => {
+    if (e.target === document.getElementById('imgLightbox')) {
+        document.getElementById('imgLightbox').style.display = 'none';
+    }
+};
+// Đóng bằng phím ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('imgLightbox').style.display = 'none';
+    }
+});
+</script>
+
+</body>
 </html>
