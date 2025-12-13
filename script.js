@@ -40,3 +40,28 @@ window.onclick = function(e) {
     const modal = document.getElementById('serviceModal');
     if (e.target === modal) closeModal();
 }
+
+// Lightbox - Phóng to ảnh khi click
+document.querySelectorAll('.slider-track img').forEach(img => {
+    img.addEventListener('click', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Khóa scroll nền
+    });
+});
+
+// Đóng lightbox
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Đóng khi click ngoài ảnh
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
