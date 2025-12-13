@@ -626,7 +626,7 @@ body {
     .product-slider-section { padding: 40px 20px; }
     .slider-header h3 { font-size: 2.3rem; }
     .slider-track img { height: 180px; }
-    .slider-track { --gap: 15px; animation-duration: 30s; } /* Nhanh hơn trên mobile */
+    .slider-track { --gap: 15px; animation-duration: 15s; } /* Nhanh hơn trên mobile */
     .slider-cta .btn-primary.large,
     .btn-zalo { display: block; width: 90%; margin: 15px auto; }
 }
@@ -695,3 +695,4 @@ body {
         max-height: 85vh;
     }
 }
+
