@@ -575,7 +575,7 @@ body {
     --gap: 30px; /* Khoảng cách giữa các ảnh - chỉnh ở đây nếu muốn thay đổi */
     display: flex;
     gap: var(--gap);
-    animation: scroll 50s linear infinite; /* Tốc độ cuộn - giảm số để nhanh hơn */
+    animation: scroll 30s linear infinite; /* Tốc độ cuộn - giảm số để nhanh hơn */
 }
 
 .slider-container:hover .slider-track {
@@ -626,7 +626,7 @@ body {
     .product-slider-section { padding: 40px 20px; }
     .slider-header h3 { font-size: 2.3rem; }
     .slider-track img { height: 180px; }
-    .slider-track { --gap: 15px; animation-duration: 40s; } /* Nhanh hơn trên mobile */
+    .slider-track { --gap: 15px; animation-duration: 30s; } /* Nhanh hơn trên mobile */
     .slider-cta .btn-primary.large,
     .btn-zalo { display: block; width: 90%; margin: 15px auto; }
 }
@@ -694,10 +694,4 @@ body {
         max-width: 95%;
         max-height: 85vh;
     }
-
 }
-
- html {
-    -webkit-text-size-adjust: 100%;
-    zoom: reset; /* Chrome, Edge */
- }
